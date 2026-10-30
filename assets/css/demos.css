@@ -1,0 +1,55 @@
+:root { color-scheme: light; font-family: "Be Vietnam Pro", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--demo-ink); background: var(--demo-bg); font-size: 14px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--demo-accent); outline-offset: 4px; }
+.demo-notice { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 42px; padding: 8px 16px; background: #151513; color: #f1eee7; font-size: 10px; letter-spacing: .04em; text-align: center; }
+.demo-notice strong { color: #d08b76; font-weight: 600; }
+.demo-header { display: flex; align-items: center; justify-content: space-between; width: min(1120px, calc(100% - 44px)); min-height: 82px; margin: auto; border-bottom: 1px solid var(--demo-line); }
+.demo-logo { font-size: 13px; font-weight: 700; letter-spacing: .13em; }
+.demo-nav { display: flex; align-items: center; gap: 27px; color: var(--demo-muted); font-size: 11px; }
+.demo-nav a:last-child { padding: 10px 14px; border: 1px solid var(--demo-line); color: var(--demo-ink); }
+.demo-wrap { width: min(1120px, calc(100% - 44px)); margin: auto; }
+.demo-kicker { color: var(--demo-accent); font-size: 9px; font-weight: 600; letter-spacing: .16em; }
+.demo-hero { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 35px; min-height: 580px; padding-block: 80px; }
+.demo-hero h1 { margin: 22px 0; font-family: Georgia, serif; font-size: clamp(56px, 8vw, 104px); font-weight: 400; line-height: .96; letter-spacing: -.07em; }
+.demo-hero h1 em { color: var(--demo-accent); font-weight: 400; }
+.demo-hero p { max-width: 470px; color: var(--demo-muted); font-size: 13px; line-height: 1.9; }
+.demo-cta { display: inline-flex; align-items: center; gap: 15px; margin-top: 20px; padding: 13px 17px; background: var(--demo-ink); color: white; font-size: 11px; }
+.demo-visual { position: relative; display: grid; place-items: center; min-height: 345px; overflow: hidden; background: var(--demo-visual); }
+.demo-visual::before { position: absolute; width: 68%; height: 68%; border: 1px solid var(--demo-accent); border-radius: 50%; content: ""; opacity: .45; }
+.demo-orbit { position: relative; display: grid; place-items: center; width: 180px; height: 230px; border: 1px solid var(--demo-accent); border-radius: 90px 90px 10px 10px; background: var(--demo-product); box-shadow: 20px 25px 50px rgba(20,20,20,.13); transform: rotate(-7deg); }
+.demo-orbit span { color: var(--demo-accent); font-family: Georgia, serif; font-size: 76px; font-style: italic; }
+.demo-band { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 23px; border-block: 1px solid var(--demo-line); color: var(--demo-muted); font-size: 10px; }
+.demo-content { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; padding-block: 90px; }
+.demo-content h2 { margin: 0; font-family: Georgia, serif; font-size: clamp(36px, 5vw, 60px); font-weight: 400; line-height: 1; letter-spacing: -.05em; }
+.demo-content p { max-width: 660px; margin-top: 0; color: var(--demo-muted); font-size: 13px; line-height: 2; }
+.demo-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 30px; }
+.demo-list div { min-height: 120px; padding: 18px; border: 1px solid var(--demo-line); }
+.demo-list b { display: block; margin-bottom: 9px; font-family: Georgia, serif; font-size: 20px; font-weight: 400; }
+.demo-list span { color: var(--demo-muted); font-size: 10px; }
+.demo-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; border-top: 1px solid var(--demo-line); color: var(--demo-muted); font-size: 10px; }
+.demo-return { color: var(--demo-accent); }
+
+.demo-personal { --demo-bg: #eeeae1; --demo-ink: #24221e; --demo-muted: #706b62; --demo-line: #cec7ba; --demo-accent: #98654e; --demo-visual: #ddd5c8; --demo-product: #e8e0d4; }
+.demo-business { --demo-bg: #e6e2d8; --demo-ink: #25251f; --demo-muted: #6e7064; --demo-line: #c7c8bb; --demo-accent: #61715d; --demo-visual: #d5d8ca; --demo-product: #e6e9df; }
+.demo-landing { --demo-bg: #f0eee8; --demo-ink: #20201f; --demo-muted: #72716c; --demo-line: #d1cec5; --demo-accent: #9a634d; --demo-visual: #dedbd3; --demo-product: #f1eee7; }
+.demo-business .demo-hero h1 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 500; letter-spacing: -.075em; }
+.demo-business .demo-orbit { border-radius: 5px; transform: rotate(5deg); }
+.demo-business .demo-orbit span { font-family: inherit; font-size: 55px; font-style: normal; font-weight: 500; }
+.demo-landing .demo-hero h1 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 600; letter-spacing: -.085em; }
+.demo-landing .demo-orbit { width: 160px; height: 230px; border-radius: 24px; }
+.demo-landing .demo-orbit span { font-size: 52px; }
+@media (max-width: 700px) {
+  .demo-header { min-height: 68px; }
+  .demo-nav { gap: 12px; font-size: 9px; }
+  .demo-nav a:not(:last-child) { display: none; }
+  .demo-hero { grid-template-columns: 1fr; min-height: 0; gap: 32px; padding-block: 58px; }
+  .demo-hero h1 { font-size: clamp(54px, 15vw, 78px); }
+  .demo-visual { min-height: 280px; }
+  .demo-content { grid-template-columns: 1fr; gap: 24px; padding-block: 60px; }
+  .demo-list { grid-template-columns: 1fr; }
+  .demo-band { flex-wrap: wrap; justify-content: flex-start; }
+  .demo-footer { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
